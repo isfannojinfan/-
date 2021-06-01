@@ -6,37 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./vue.js"></script>
+    <script src="http://unpkg.com/marked"></script>
     <style>
+        .body{
+            margin: 0;
+        }
+
         .notebook,.input,.preview{
-            border:1px solid whitesmoke;
-            height: 500px;
-            position: absolute;
+            height: 1000px;
     
         }
+        #notebook{
+            display: flex;
+         }
          
         .notebook{
-            width: 20%;
-            /* position: absolute; */
-            left: 0%;
-            top: 0%;
-            background-color: orange;
+            width: 33%;
+            background-color: rgb(252, 237, 225);
         }
 
         .input{
-            width:20%;
-            /* position: absolute; */
-            left: 20%;
-            top: 0%;
-            background-color: palegreen;
+            width:34%;   
+            background-color: papayawhip;
         }
 
         .preview{
-            width:20%;
-            /* position: absolute; */
-            left: 40%;
-            top: 0%;
-            background-color: paleturquoise;
+            width:33%;         
+            background-color: antiquewhite;
             
+        }
+        .textarea{
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+
         }
     </style>
 </head>
@@ -44,10 +47,16 @@
 <body>
     <div id='notebook'>
         <div class='notebook'>notebook</div>
-        <div class='input'>input</div>
+        <div class='input'>
+            <textarea>
+                text
+            </textarea>
+        </div>
         <div class='preview'>preview</div>
     </div>
     <script>
+        const html=marked('#hello')
+        console.log(html)
         var vm = new Vue({
             el:'#notebook'
         })
