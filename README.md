@@ -1,4 +1,4 @@
-./git config --global user.email 838680559@qq.com
+git config --global user.email 838680559@qq.com
 git config --global user.name "isfannojinfan"
 git config --global url."https://github.com.cnpmjs.org/".insteadOf "https://github.com/"
 git checkout -b develop
